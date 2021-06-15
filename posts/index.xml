@@ -1,20 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Jack&#39;s Blog</title>
-    <link>https://jk13o3lll.github.io/posts/</link>
-    <description>Recent content in Posts on Jack&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <lastBuildDate>Tue, 15 Jun 2021 12:42:33 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello</title>
-      <link>https://jk13o3lll.github.io/posts/hello/</link>
-      <pubDate>Tue, 15 Jun 2021 12:42:33 +0800</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/posts/hello/</guid>
-      <description>Hello!</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>All Posts - Jack&#39;s Blog</title>
+        <link>https://jk13o3lll.github.io/posts/</link>
+        <description>All Posts | Jack&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 15 Jun 2021 12:42:33 &#43;0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Hello</title>
+    <link>https://jk13o3lll.github.io/hello/</link>
+    <pubDate>Tue, 15 Jun 2021 12:42:33 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://jk13o3lll.github.io/hello/</guid>
+    <description><![CDATA[Hello!]]></description>
+</item></channel>
 </rss>
