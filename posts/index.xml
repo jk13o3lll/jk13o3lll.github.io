@@ -4,12 +4,13 @@
         <link>https://jk13o3lll.github.io/posts/</link>
         <description>All Posts | Jack&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ccwang.jack@gmail.com (Chien-Chih Wang)</managingEditor>
-            <webMaster>ccwang.jack@gmail.com (Chien-Chih Wang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 15 Jun 2021 17:28:50 &#43;0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Hello</title>
-    <link>https://jk13o3lll.github.io/hello/</link>
-    <pubDate>Tue, 15 Jun 2021 17:28:50 &#43;0800</pubDate>
+            <webMaster>ccwang.jack@gmail.com (Chien-Chih Wang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Basic Markdown Syntax</title>
+    <link>https://jk13o3lll.github.io/basic-markdown-syntax/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://jk13o3lll.github.io/hello/</guid>
-    <description><![CDATA[Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.]]></description>
+    <guid>https://jk13o3lll.github.io/basic-markdown-syntax/</guid>
+    <description><![CDATA[<h1 id="hello-哈囉">Hello 哈囉</h1>
+<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>]]></description>
 </item></channel>
 </rss>

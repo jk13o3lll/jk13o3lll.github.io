@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Jack&#39;s Blog</title>
-        <link>https://jk13o3lll.github.io/</link>
-        <description>Jack&#39;s Blog</description>
+        <title>Markdown - Category - Jack&#39;s Blog</title>
+        <link>https://jk13o3lll.github.io/categories/markdown/</link>
+        <description>Markdown - Category - Jack&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>ccwang.jack@gmail.com (Chien-Chih Wang)</managingEditor>
-            <webMaster>ccwang.jack@gmail.com (Chien-Chih Wang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate>
-            <atom:link href="https://jk13o3lll.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>ccwang.jack@gmail.com (Chien-Chih Wang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/categories/markdown/" rel="self" type="application/rss+xml" /><item>
     <title>Basic Markdown Syntax</title>
     <link>https://jk13o3lll.github.io/basic-markdown-syntax/</link>
     <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
