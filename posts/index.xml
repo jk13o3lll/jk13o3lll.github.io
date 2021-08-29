@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hugo tranquilpeak theme</title>
+    <title>Posts on Jack&#39;s Blog</title>
     <link>https://jk13o3lll.github.io/posts/</link>
-    <description>Recent content in Posts on Hugo tranquilpeak theme</description>
+    <description>Recent content in Posts on Jack&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Aug 2021 02:44:59 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -32,15 +32,6 @@
       
       <guid>https://jk13o3lll.github.io/2015/06/who-is-using-tranquilpeak-hugo-theme/</guid>
       <description>&lt;p&gt;Here you can find a list of the blogs that use Tranquilpeak theme, with different styles and customizations.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Elements showcase</title>
-      <link>https://jk13o3lll.github.io/2015/05/elements-showcase/</link>
-      <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/2015/05/elements-showcase/</guid>
-      <description>&lt;p&gt;Check out how Tranquilpeak theme display well HTML elements (title, paragraph, blockquote, table and more..). It&amp;rsquo;s simple and elegant.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -107,30 +98,12 @@
     </item>
     
     <item>
-      <title>中文測試</title>
-      <link>https://jk13o3lll.github.io/2013/10/chinese-test/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/2013/10/chinese-test/</guid>
-      <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Image gallery showcase</title>
       <link>https://jk13o3lll.github.io/2013/02/image-gallery-showcase/</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://jk13o3lll.github.io/2013/02/image-gallery-showcase/</guid>
       <description>&lt;p&gt;And here is the image gallery!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>日本語テスト</title>
-      <link>https://jk13o3lll.github.io/2013/01/japanese-test/</link>
-      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/2013/01/japanese-test/</guid>
-      <description>&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.&lt;/p&gt;</description>
     </item>
     
   </channel>
