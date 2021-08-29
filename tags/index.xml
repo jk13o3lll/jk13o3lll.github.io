@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Hugo tranquilpeak theme</title>
+    <title>Tags on Jack&#39;s Blog</title>
     <link>https://jk13o3lll.github.io/tags/</link>
-    <description>Recent content in Tags on Hugo tranquilpeak theme</description>
+    <description>Recent content in Tags on Jack&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Aug 2021 02:44:59 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -179,29 +179,11 @@
     </item>
     
     <item>
-      <title>chinese</title>
-      <link>https://jk13o3lll.github.io/tags/chinese/</link>
-      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/tags/chinese/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>image gallery</title>
       <link>https://jk13o3lll.github.io/tags/image-gallery/</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
       <guid>https://jk13o3lll.github.io/tags/image-gallery/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>japanese</title>
-      <link>https://jk13o3lll.github.io/tags/japanese/</link>
-      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/tags/japanese/</guid>
       <description></description>
     </item>
     
