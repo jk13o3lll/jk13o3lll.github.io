@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jack&#39;s Blog</title>
-    <link>https://jk13o3lll.github.io/</link>
-    <description>Recent content on Jack&#39;s Blog</description>
+    <title>C/C&#43;&#43; on Jack&#39;s Blog</title>
+    <link>https://jk13o3lll.github.io/tags/c/c&#43;&#43;/</link>
+    <description>Recent content in C/C&#43;&#43; on Jack&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 09 Sep 2021 20:59:59 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://jk13o3lll.github.io/tags/c/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Right left rule</title>
       <link>https://jk13o3lll.github.io/2021/09/right-left-rule/</link>

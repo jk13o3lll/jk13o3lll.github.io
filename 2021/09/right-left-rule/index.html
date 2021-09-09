@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Right left rule",
+  
+  "image": "//images.unsplash.com/photo-1601979142879-ad5896cb0617?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\u0026ixlib=rb-1.2.1\u0026auto=format\u0026fit=crop\u0026w=1920\u0026q=80",
+  
+  "datePublished": "2021-09-09T20:59:59+08:00",
+  "dateModified": "2021-09-09T20:59:59+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Jack Wang",
+    
+    "image": "https://jk13o3lll.github.io/img/avatar2.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/jk13o3lll.github.io\/2021\/09\/right-left-rule\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jack's Blog",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://jk13o3lll.github.io/img/avatar2.jpg"
+    }
+    
+  },
+  "description": "The \u0026ldquo;right-left\u0026rdquo; rule is a simple rule to deciphere C declarations.\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.87.0 with theme Tranquilpeak 0.5.1-BETA">
+<meta name="author" content="Jack Wang">
+<meta name="keywords" content="">
+<meta name="description" content="The &ldquo;right-left&rdquo; rule is a simple rule to deciphere C declarations.">
+
+
+<meta property="og:description" content="The &ldquo;right-left&rdquo; rule is a simple rule to deciphere C declarations.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Right left rule">
+<meta name="twitter:title" content="Right left rule">
+<meta property="og:url" content="https://jk13o3lll.github.io/2021/09/right-left-rule/">
+<meta property="twitter:url" content="https://jk13o3lll.github.io/2021/09/right-left-rule/">
+<meta property="og:site_name" content="Jack&#39;s Blog">
+<meta property="og:description" content="The &ldquo;right-left&rdquo; rule is a simple rule to deciphere C declarations.">
+<meta name="twitter:description" content="The &ldquo;right-left&rdquo; rule is a simple rule to deciphere C declarations.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2021-09-09T20:59:59">
+  
+  
+    <meta property="article:modified_time" content="2021-09-09T20:59:59">
+  
+  
+  
+    
+      <meta property="article:section" content="C/C&#43;&#43;">
+    
+  
+  
+    
+      <meta property="article:tag" content="C/C&#43;&#43;">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://jk13o3lll.github.io/img/avatar2.jpg">
+  <meta property="twitter:image" content="https://jk13o3lll.github.io/img/avatar2.jpg">
+
+
+
+
+  <meta property="og:image" content="//images.unsplash.com/photo-1601979142879-ad5896cb0617?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+  <meta property="twitter:image" content="//images.unsplash.com/photo-1601979142879-ad5896cb0617?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80">
+
+
+  <meta property="og:image" content="//images.unsplash.com/photo-1601979142879-ad5896cb0617?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80">
+  <meta property="twitter:image" content="//images.unsplash.com/photo-1601979142879-ad5896cb0617?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80">
+
+
+    <title>Right left rule</title>
+
+    <link rel="icon" href="https://jk13o3lll.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://jk13o3lll.github.io/2021/09/right-left-rule/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://jk13o3lll.github.io/css/style-2w2urpokyukbsouppglitcyxngrsa0pcm58rrm5mqo3ieqo6bkvr3cz9nvf.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://jk13o3lll.github.io/" aria-label="Go to homepage">Jack&#39;s Blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://jk13o3lll.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://jk13o3lll.github.io/img/avatar2.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://jk13o3lll.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://jk13o3lll.github.io/img/avatar2.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Jack Wang</h4>
+        
+          <h5 class="sidebar-profile-bio">An engineer with interests in object detection and remote PPG. A newbie to web development. Contact me: <a href="mailto:ccwang.jack@gmail.com">ccwang.jack@gmail.com</a></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jk13o3lll.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jk13o3lll.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jk13o3lll.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jk13o3lll.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://jk13o3lll.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/jk13o3lll" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.facebook.com/profile.php?id=100002373201580" target="_blank" rel="noopener" title="Facebook">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-facebook" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Facebook</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:ccwang.jack@gmail.com" target="_blank" rel="noopener" title="Email">
+    
+      <i class="sidebar-button-icon far fa-envelope" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Email</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              "
+       style="background-image:url('//images.unsplash.com/photo-1601979142879-ad5896cb0617?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80')"
+       data-behavior="4">
+    
+      <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Right left rule
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2021-09-09T20:59:59&#43;08:00">
+        
+  September 9, 2021
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://jk13o3lll.github.io/categories/c/c&#43;&#43;">C/C&#43;&#43;</a>
+    
+  
+
+  </div>
+
+</div>
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaIn
+               ">
+        <article class="post">
+          
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>The &ldquo;right-left&rdquo; rule is a simple rule to deciphere C declarations.</p>
+<h1 id="table-of-contents">Table of Contents</h1>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#elements">Elements</a></li>
+    <li><a href="#rule">Rule</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#remarks">Remarks</a>
+      <ul>
+        <li><a href="#illegal-combinations">Illegal combinations</a></li>
+        <li><a href="#about-typedef">About typedef</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<h1 id="reference">Reference</h1>
+<ul>
+<li>Reference of the &ldquo;right-left&rdquo; rule: <a href="https://cseweb.ucsd.edu//~ricko/rt_lt.rule.html">https://cseweb.ucsd.edu//~ricko/rt_lt.rule.html</a></li>
+<li>A website to deciphere C declarations: <a href="https://cdecl.org/">https://cdecl.org/</a></li>
+</ul>
+<h1 id="elements">Elements</h1>
+<ul>
+<li><code>x</code> (identifier): x is</li>
+<li><code>int</code> (type): integer</li>
+<li><code>const</code>: constant</li>
+<li><code>*</code>: pointer to</li>
+<li><code>[]</code>: array of</li>
+<li><code>()</code>: funtion returning</li>
+</ul>
+<h1 id="rule">Rule</h1>
+<blockquote>
+<ol>
+<li>Start from identifier.</li>
+<li>Move right until out of symobls or right parenthesis hit.</li>
+<li>Move left until out of symbols or left parenthesis hit.</li>
+<li>Then repeat step 2 and 3 alternatively until out of all symbols.</li>
+</ol>
+</blockquote>
+<p>P.S. Symbols that have already encountered should be ignored.</p>
+<h1 id="examples">Examples</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">int</span> (<span style="color:#f92672">*</span>a)[];   <span style="color:#75715e">// a is a pointer to an array of integers
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">b</span>();     <span style="color:#75715e">// b is a function returning a pointer to an integer
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> (<span style="color:#f92672">*</span>c[])(); <span style="color:#75715e">// c is an array of pointers to functions returning an integer
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> (<span style="color:#f92672">*</span>d())[]; <span style="color:#75715e">// d is a function returning a pointer to an array of integers
+</span></code></pre></div><h1 id="remarks">Remarks</h1>
+<h2 id="illegal-combinations">Illegal combinations</h2>
+<ul>
+<li><code>[]()</code>: cannot have an array of funtions
+<div class="alert warning no-icon ">
+  <p>You should use <strong>an array of pointers</strong> to functions.</p>
+</div></li>
+<li><code>()()</code>: cannot have a function that returns a function
+<div class="alert warning no-icon ">
+  <p>You should use <strong>first-class functions</strong> in C++.</p>
+</div></li>
+<li><code>()[]</code>: cannot have a function that returns an array
+<div class="alert warning no-icon ">
+  <p>You should use <strong>a function returing a pointer</strong> to dynamically allocated memory.</p>
+</div></li>
+</ul>
+<h2 id="about-typedef">About typedef</h2>
+<p>This rule also could be applied to <code>typedef</code>.</p>
+<p>For example,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Magic</span> {
+    ...
+} <span style="color:#f92672">*</span>PMagic[<span style="color:#ae81ff">10</span>];
+
+<span style="color:#75715e">// typdef (struct Magic { ... }) * PMagic [10];
+</span><span style="color:#75715e">// PMagic is pointer (with size is 10) of (struct Magic).
+</span></code></pre></div>
+              
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://jk13o3lll.github.io/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://jk13o3lll.github.io/2021/09/right-left-rule/" title="Share on %s Facebook" aria-label="Share on %s Facebook">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://jk13o3lll.github.io/2021/09/right-left-rule/" title="Share on %s Twitter" aria-label="Share on %s Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+        
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href="https://github.com/jk13o3lll/blog-jk13o3lll">Jack Wang</a> <font size="1">(Powered by <a href="https://github.com/kakawait">kakawait</a>. Cover photo by <a href="https://unsplash.com/@randytarampi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Randy Tarampi</a> on <a href="https://unsplash.com/s/photos/vision?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.)</font>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://jk13o3lll.github.io/2021/09/right-left-rule/" title="Share on %s Facebook" aria-label="Share on %s Facebook">
+              <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://jk13o3lll.github.io/2021/09/right-left-rule/" title="Share on %s Twitter" aria-label="Share on %s Twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+        
+          <i class="fa fa-list" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjk13o3lll.github.io%2F2021%2F09%2Fright-left-rule%2F" aria-label="Share on %s Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fjk13o3lll.github.io%2F2021%2F09%2Fright-left-rule%2F" aria-label="Share on %s Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://jk13o3lll.github.io/img/avatar2.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Jack Wang</h4>
+    
+      <div id="about-card-bio">An engineer with interests in object detection and remote PPG. A newbie to web development. Contact me: <a href="mailto:ccwang.jack@gmail.com">ccwang.jack@gmail.com</a></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Unemployed
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://jk13o3lll.github.io/img/randy-tarampi-U2eUlPEKIgU-unsplash.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://jk13o3lll.github.io/js/script-8lglxdix2nqhalxxm2bujhkcc8cctdrd5o5axonwhfzx2zqrer5facyn8.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
