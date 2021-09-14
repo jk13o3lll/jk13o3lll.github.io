@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Jack&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Sep 2021 20:59:59 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 14:37:28 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linked List Sorted by Selection / Merge Sort</title>
+      <link>https://jk13o3lll.github.io/2021/09/linked-list-sorted-by-selection-/-merge-sort/</link>
+      <pubDate>Sun, 12 Sep 2021 14:37:28 +0800</pubDate>
+      
+      <guid>https://jk13o3lll.github.io/2021/09/linked-list-sorted-by-selection-/-merge-sort/</guid>
+      <description>&lt;p&gt;C++ implementation of singly linked list and the sorting algorithms.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Implementation of Quick Sort</title>
+      <link>https://jk13o3lll.github.io/2021/09/c-implementation-of-quick-sort/</link>
+      <pubDate>Sun, 12 Sep 2021 13:18:31 +0800</pubDate>
+      
+      <guid>https://jk13o3lll.github.io/2021/09/c-implementation-of-quick-sort/</guid>
+      <description>&lt;p&gt;C++ implementation of quick sort.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Right left rule</title>
       <link>https://jk13o3lll.github.io/2021/09/right-left-rule/</link>

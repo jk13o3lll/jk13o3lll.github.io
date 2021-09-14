@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jack&#39;s Blog</title>
-    <link>https://jk13o3lll.github.io/</link>
-    <description>Recent content on Jack&#39;s Blog</description>
+    <title>algorithm on Jack&#39;s Blog</title>
+    <link>https://jk13o3lll.github.io/categories/algorithm/</link>
+    <description>Recent content in algorithm on Jack&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Sep 2021 14:37:28 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 14:37:28 +0800</lastBuildDate><atom:link href="https://jk13o3lll.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linked List Sorted by Selection / Merge Sort</title>
       <link>https://jk13o3lll.github.io/2021/09/linked-list-sorted-by-selection-/-merge-sort/</link>
@@ -23,15 +23,6 @@
       
       <guid>https://jk13o3lll.github.io/2021/09/c-implementation-of-quick-sort/</guid>
       <description>&lt;p&gt;C++ implementation of quick sort.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Right left rule</title>
-      <link>https://jk13o3lll.github.io/2021/09/right-left-rule/</link>
-      <pubDate>Thu, 09 Sep 2021 20:59:59 +0800</pubDate>
-      
-      <guid>https://jk13o3lll.github.io/2021/09/right-left-rule/</guid>
-      <description>&lt;p&gt;The &amp;ldquo;right-left&amp;rdquo; rule is a simple rule to deciphere C declarations.&lt;/p&gt;</description>
     </item>
     
   </channel>
